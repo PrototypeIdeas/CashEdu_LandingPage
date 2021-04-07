@@ -2,7 +2,6 @@ import React from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs/index';
-import Contact from '../Contact/index';
 
 import partnershipImg from '../../assets/partnership-image.png';
 import arrowDown from '../../icons/arrow-down.svg';
@@ -84,7 +83,40 @@ function Partnership() {
         </section>
 
         <AboutApp />
-        <Contact />
+
+        <section className="contact">
+            <h1>Seja um Parceiro</h1>
+            <p>
+                Preenchar as informações abaixo e comece a oferecer o cashback em sua loja ou sua instituição de ensino e fomente a educação.
+            </p>
+            <form>
+                <input 
+                    type="text"
+                    name="name"
+                    placeholder="Nome"
+                />
+
+                <input 
+                    type="number"
+                    name="telephone"
+                    placeholder="Telefone"
+                />
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                />
+
+                <input 
+                    type="textarea"
+                    name="observacao"
+                    placeholder="Observação"
+                />
+
+                <button>Enviar</button>
+            </form>
+        </section>
         </>
     );
 }

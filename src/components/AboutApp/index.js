@@ -4,7 +4,7 @@ import '../../styles/components/AboutApp/styles.css';
 
 import playStore from '../../assets/play-store.svg';
 import appleStore from '../../assets/apple-store.svg';
-import frame from '../../assets/frame.svg';
+import mobile from '../../assets/mobile.jpeg';
 
 function AboutApp() {
     return (
@@ -32,7 +32,7 @@ function AboutApp() {
                 </div>
             </div>
 
-            <img src={frame} alt="Teste" />     
+            <img src={mobile} alt="Teste" />     
         </section>
     );
 }

@@ -36,6 +36,7 @@
 }
 
 .about-app > img{
+    height: 80%;
     margin: 4rem auto;
 
     border-radius: 5rem;

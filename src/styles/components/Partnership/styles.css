@@ -12,7 +12,7 @@
 }
 
 .partnership-content .incentive h1 {
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 700;
 
     color: var(--text-secondary);
@@ -181,7 +181,7 @@
     justify-content: center;
     align-items: center;
 
-    margin: 1.2rem 1.8rem;
+    margin: 1.2rem auto;
 }
 
 .institution {
@@ -201,7 +201,7 @@
     justify-content: center;
     align-items: center;
 
-    margin: 1.2rem 1.8rem;
+    margin: 1.2rem auto;
 }
 
 .others {
@@ -221,7 +221,7 @@
     justify-content: center;
     align-items: center;
 
-    margin: 1.2rem 1.8rem;
+    margin: 1.2rem auto;
 }
 
 .btn-register {
@@ -246,6 +246,89 @@
 
     cursor: pointer;
 }
+
+.contact {
+    height: 600px;
+    background-image: url("../../../assets/bg-contact.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact > form > h1 > p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.contact > h1 {
+    font-size: 50px;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2rem;
+
+    color: var(--text-secondary);
+}
+
+.contact > p {
+    width: 50%;
+
+    font-size: 20px;
+    font-weight: 300;
+
+    text-align: center;
+
+    margin: 1rem auto;
+
+    color: var(--text-secondary);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2rem;
+}
+
+.contact input {
+    width: 50%;
+    height: 2.5rem;
+
+    border: 1px solid var(--border);
+    padding-left: 1rem;
+    outline: none;
+
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.contact button {
+    width: 50%;
+    height: 2.5rem;
+
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    color: var(--text-button);
+    background: var(--bg-button-yellow);
+
+    cursor: pointer;
+} 
+
 
 @media (max-width: 1100px) {
     .partnership-content {
@@ -293,6 +376,10 @@
         height: 35vh;
     }
 
+    .store img {
+        margin: 1.2rem 1.8rem;
+    }
+
     .institution {
         width: auto;
         height: 35vh;
@@ -301,10 +388,21 @@
         margin-bottom: 1rem;
     }
 
+    .institution img {
+        margin: 1.2rem 1.8rem;
+    }
+
     .others {
         width: auto;
         height: 35vh;
     }
 
+    .others img {
+        margin: 1.2rem 1.8rem;
+    }
+
+    .contact {
+        text-align: center;
+    }
     
 }

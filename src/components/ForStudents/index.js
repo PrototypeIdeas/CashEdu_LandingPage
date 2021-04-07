@@ -1,7 +1,6 @@
 import React from 'react';
 
 import AboutApp from '../AboutApp/index';
-import Contact from '../Contact/index';
 import AboutUs from '../AboutUs';
 
 import avatar from '../../assets/image.svg';
@@ -102,7 +101,38 @@ function Header() {
         </section>
 
         <AboutApp />
-        <Contact />
+        
+        <section className="contact">
+            <h1>ENTRE EM CONTATO</h1>
+            <p>Ainda precisa de ajuda? Envie uma mensagem para gente para que possamos te auxiliar!</p>
+            <form>
+                <input 
+                    type="text"
+                    name="name"
+                    placeholder="Nome"
+                />
+
+                <input 
+                    type="number"
+                    name="telephone"
+                    placeholder="Telefone"
+                />
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                />
+
+                <input 
+                    type="textarea"
+                    name="observacao"
+                    placeholder="Observação"
+                />
+
+                <button>Enviar</button>
+            </form>
+        </section>
         </>
     );
 }
