@@ -1,0 +1,55 @@
+.about-app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-top: -12.5rem; */
+
+    background: var(--bg-yellow);
+}
+
+.about-app .text-about-app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-app .text-about-app h1 {
+    font-size: 50px;
+    font-weight: 700;
+
+    color: var(--text-secondary);
+}
+
+.about-app .text-about-app p {
+    width: 75%;
+    margin-top: 2rem;
+    
+    color: var(--text-light);
+}
+
+.about-app .selos-store {
+    margin-top: 4rem;
+}
+
+.about-app > img{
+    margin: 4rem auto;
+
+    border-radius: 5rem;
+}
+
+@media (max-width: 1100px) { 
+    .about-app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-app h1 {
+        margin-top: 2rem;
+    }
+}

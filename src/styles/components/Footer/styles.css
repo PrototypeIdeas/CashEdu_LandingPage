@@ -1,0 +1,99 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 4rem;
+
+    background: var(--text-secondary);
+}
+
+.footer > img {
+    width: 200px;
+    height: 200px;
+
+    /* margin-left: 4rem; */
+    margin-top: 3rem;
+}
+
+.footer > a {
+    font-weight: 700;
+}
+
+.footer .student, a {
+    font-size: 18px;
+    font-weight: 300;
+
+    color: var(--text-button);
+}
+
+.footer .student > p {
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--text-button);
+}
+
+.footer .student li {
+    margin-top: 1rem;
+}
+
+.footer .patnership, a {
+    font-size: 18px;
+    font-weight: 300;
+
+    margin-top: 2.2rem;
+
+    color: var(--text-button);
+}
+
+.footer .patnership > p {
+    font-size: 18px;
+    font-weight: 700;
+
+    color: var(--text-button);
+}
+
+.footer .patnership li {
+    margin-top: 1rem;
+}
+
+.social-media > p {
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--text-button);
+}
+
+.social-media .icons {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 4rem;
+}
+
+.social-media .icons > img {
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media .icons {
+        margin-right: 0px;
+    }
+
+    .social-media .icons > img {
+        margin-right: 0px;
+    }
+}
