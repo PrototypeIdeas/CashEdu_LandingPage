@@ -115,6 +115,7 @@
     margin-right: 1rem;
     border: none;
     outline: none;
+    background: none;
     cursor: pointer;
 }
 
@@ -160,6 +161,11 @@
 
     .btn-faq img {
         margin: 0;
+    }
+
+    .questions > h1 {
+        width: 100%;
+        text-align: center;
     }
 
     .questions .text-question .title {
