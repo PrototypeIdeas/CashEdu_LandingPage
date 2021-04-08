@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin-top: -3rem;
+    margin-top: -10rem;
     background: var(--bg-yellow);
 }
 
