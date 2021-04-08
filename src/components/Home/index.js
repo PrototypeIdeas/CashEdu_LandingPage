@@ -38,7 +38,11 @@ function Header() {
                 { forStudentsSelected ? (
                     "header-content for-student"
                 ) : (
+                partnershipSelected ? (
                     "header-content partner-ship"
+                ) : (
+                    "header-content questions"
+                )
                 )}
             >
                 <img src={logo} alt="Logo CashEdu" />

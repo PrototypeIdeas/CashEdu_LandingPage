@@ -17,6 +17,10 @@
     background: var(--white);
 }
 
+.header-content.questions {
+    background: var(--gray);
+}
+
 .buttons.buttonDisabled {
     background: none;
     color: var(--text-disabled);
