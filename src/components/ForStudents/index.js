@@ -2,13 +2,11 @@ import React from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs';
-
 import avatar from '../../assets/image.svg';
 import headerImage from '../../assets/header-image.png';
 import arrowDown from '../../icons/arrow-down.svg';
 import playStore from '../../assets/play-store.svg';
 import appleStore from '../../assets/apple-store.svg';
-
 import '../../styles/components/ForStudents/styles.css';
 
 function Header() {
@@ -44,7 +42,7 @@ function Header() {
 
         <section className="cards">
             <div>
-                <div className="cashback">
+                <div className="cashback option">
                     <img src={avatar} alt="Avatar" />
                     <div className="text">
                         <h1>Cashback Educacional</h1>
@@ -55,7 +53,7 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="mesada">
+                <div className="mesada option">
                     <img src={avatar} alt="Avatar" />
                         <div className="text">
                             <h1>Mesada</h1>
@@ -67,7 +65,7 @@ function Header() {
                         </div>
                 </div>
 
-                <div className="indicacoes">
+                <div className="indicacoes option">
                     <img src={avatar} alt="Avatar" />
                         <div className="text">
                             <h1>Indicações de amigo</h1>
@@ -78,7 +76,7 @@ function Header() {
                         </div>
                 </div>
 
-                <div className="carteira">
+                <div className="carteira option">
                     <img src={avatar} alt="Avatar" />
                         <div className="text">
                             <h1>Carteira Digital</h1>

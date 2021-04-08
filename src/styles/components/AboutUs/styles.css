@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
+    margin-top: -5rem;
 }
 
 .about-us .text-about-us h1 {
