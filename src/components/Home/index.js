@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import ForStudents from '../ForStudents/index';
 import Partnership from '../Partnership';
+import Questions from '../Questions';
 
 import logo from '../../assets/logo.svg';
 
@@ -34,9 +35,10 @@ function Header() {
         <>   
             <nav 
                 className=
-                {forStudentsSelected ? ( "header-content for-student" 
-                ) : ( 
-                "header-content partner-ship" 
+                { forStudentsSelected ? (
+                    "header-content for-student"
+                ) : (
+                    "header-content partner-ship"
                 )}
             >
                 <img src={logo} alt="Logo CashEdu" />
@@ -80,7 +82,7 @@ function Header() {
                 </>
             ) : (
                 // FUTURE COMPONENT
-                <section></section>
+                <Questions />
             )}
             </>
             )}
