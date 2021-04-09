@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs';
@@ -12,9 +12,51 @@ import mesada from '../../assets/mesada.svg';
 import indicacao from '../../assets/indicacao.svg';
 import carteiraDigital from '../../assets/carteira-digital.svg';
 
+import InputMask from "react-input-mask";
+
 import '../../styles/components/ForStudents/styles.css';
 
+
 function Header() {
+    
+    useEffect(() => {
+        if(window.innerWidth > 1100){
+            document.getElementById('about-app').style.marginTop = "-10rem";
+        }
+    });
+
+    const submitForm = e => {
+        document.getElementById('nome').setAttribute("disabled","disabled");
+        document.getElementById('telephone').setAttribute("disabled","disabled");
+        document.getElementById('email').setAttribute("disabled","disabled");
+        document.getElementById('observacao').setAttribute("disabled","disabled");
+
+        fetch(`http://localhost:3001/send-email`,
+        {
+          method: "POST",
+          headers: new Headers({
+            'Content-Type': 'application/json',
+            'Accept': '*/*',
+            'Access-Control-Allow-Origin': '*',
+          }),
+          body: JSON.stringify({
+            "subject": "Contato - Para Estudantes",
+            "text": "<strong>Nome: </strong>" + document.getElementById('nome').value + "<br><strong>Telefone: </strong>" + document.getElementById('telephone').value + 
+            "<br><strong>Email: </strong>" + document.getElementById('email').value + "<br><strong>OBS: </strong>" + document.getElementById('observacao').value
+          })
+        }
+        ).then(resp => {
+            if (resp.ok) {
+                document.location.reload(true);
+            } else {
+                document.getElementById('nome').removeAttribute("disabled");
+                document.getElementById('telephone').removeAttribute("disabled");
+                document.getElementById('email').removeAttribute("disabled");
+                document.getElementById('observacao').removeAttribute("disabled");
+            }
+        })
+    };
+
     return (
         <>
         <section className="presentation">
@@ -116,33 +158,13 @@ function Header() {
         <section id="contact" className="contact">
             <h1>ENTRE EM CONTATO</h1>
             <p>Ainda precisa de ajuda? Envie uma mensagem para gente para que possamos te auxiliar!</p>
-            <form method="post" action="mailto:gabriel.tosta@gmail.com">
-                <input 
-                    type="text"
-                    name="name"
-                    placeholder="Nome"
-                />
-
-                <input 
-                    type="number"
-                    name="telephone"
-                    placeholder="Telefone"
-                />
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                />
-
-                <input 
-                    type="textarea"
-                    name="observacao"
-                    placeholder="Observação"
-                />
-
-                <button>Enviar</button>
-            </form>
+            <div className="form">
+                <InputMask id="nome" name="nome" placeholder="Nome"/>
+                <InputMask id="telephone" mask="(99)99999-9999" name="telephone" placeholder="Telefone"/>
+                <InputMask id="email" name="email" placeholder="E-mail"/>
+                <InputMask id="observacao" name="observacao" placeholder="Observação"/>
+                <button onClick={submitForm}>Enviar</button>
+            </div>
         </section>
         </>
     );

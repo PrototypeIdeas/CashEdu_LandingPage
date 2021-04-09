@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs/index';
@@ -11,9 +11,48 @@ import lojista from '../../assets/lojista.svg';
 import instituicao from '../../assets/instituicao.svg';
 import parceiros from '../../assets/parceiros.svg';
 
+import InputMask from "react-input-mask";
+
 import '../../styles/components/Partnership/styles.css';
 
 function Partnership() {
+    
+    useEffect(() => {
+        document.getElementById('about-app').style.marginTop = "0rem";
+    });
+
+    const submitForm = e => {
+        document.getElementById('nome').setAttribute("disabled","disabled");
+        document.getElementById('telephone').setAttribute("disabled","disabled");
+        document.getElementById('email').setAttribute("disabled","disabled");
+        document.getElementById('observacao').setAttribute("disabled","disabled");
+
+        fetch(`http://localhost:3001/send-email`,
+        {
+          method: "POST",
+          headers: new Headers({
+            'Content-Type': 'application/json',
+            'Accept': '*/*',
+            'Access-Control-Allow-Origin': '*',
+          }),
+          body: JSON.stringify({
+            "subject": "Contato - Seja Parceiro",
+            "text": "<strong>Nome: </strong>" + document.getElementById('nome').value + "<br><strong>Telefone: </strong>" + document.getElementById('telephone').value + 
+            "<br><strong>Email: </strong>" + document.getElementById('email').value + "<br><strong>OBS: </strong>" + document.getElementById('observacao').value
+          })
+        }
+        ).then(resp => {
+            if (resp.ok) {
+                document.location.reload(true);
+            } else {
+                document.getElementById('nome').removeAttribute("disabled");
+                document.getElementById('telephone').removeAttribute("disabled");
+                document.getElementById('email').removeAttribute("disabled");
+                document.getElementById('observacao').removeAttribute("disabled");
+            }
+        })
+    };
+
     return (
         <>
         <section className="partnership-content">
@@ -31,7 +70,7 @@ function Partnership() {
             <span>Veja mais</span>
             <img src={arrowDown} alt="Veja mais" />
         </a>
-        
+
         <AboutUs />
 
         <section id="for-partner" className="for-partner">
@@ -92,33 +131,13 @@ function Partnership() {
             <p>
                 Preenchar as informações abaixo e comece a oferecer o cashback em sua loja ou sua instituição de ensino e fomente a educação.
             </p>
-            <form>
-                <input 
-                    type="text"
-                    name="name"
-                    placeholder="Nome"
-                />
-
-                <input 
-                    type="number"
-                    name="telephone"
-                    placeholder="Telefone"
-                />
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                />
-
-                <input 
-                    type="textarea"
-                    name="observacao"
-                    placeholder="Observação"
-                />
-
-                <button>Enviar</button>
-            </form>
+            <div className="form">
+                <InputMask id="nome" name="nome" placeholder="Nome"/>
+                <InputMask id="telephone" mask="(99)99999-9999" name="telephone" placeholder="Telefone"/>
+                <InputMask id="email" name="email" placeholder="E-mail"/>
+                <InputMask id="observacao" name="observacao" placeholder="Observação"/>
+                <button onClick={submitForm}>Enviar</button>
+            </div>
         </section>
         </>
     );

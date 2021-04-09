@@ -14,8 +14,6 @@ function Header() {
     const [commonQuestions, setCommonQuestions] = useState(false);
     const [classNameNav, setClassNameNav] = useState('header-content questions');
 
-
-
     function handleForStudents() {
         setForStudentSelected(true);
         setPatnershipSelected(false);

@@ -2,7 +2,6 @@ import React, { useState }from 'react';
 
 import arrowDownYellow from '../../icons/arrow-down-yellow.svg';
 
-// import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -21,6 +20,26 @@ function Questions() {
     setQuestion(e.target.value);
   }
 
+  const search = e => {
+ 
+    var name = document.getElementById("input-text").value;
+    var pattern = name.toLowerCase();
+    var targetId = "";
+  
+    var divs = document.getElementsByClassName("title");
+    for (var i = 0; i < divs.length; i++) {
+      var index = divs[i].innerText.toLowerCase().indexOf(pattern);
+      if (index != -1) {
+        // targetId = divs[i].parentNode.id;
+        // console.log('chegou aqui')
+        document.getElementById(divs[i].id).scrollIntoView();
+        document.getElementById(divs[i].id).click();
+
+        break;
+      }
+    }  
+  }
+
     return (
       <>
         <section className="search-questions">
@@ -29,25 +48,31 @@ function Questions() {
 
             <div className="input-search">
                 <input
+                    id="input-text"
                     type="text"
                     name="pesquisar"
                     placeholder="Digite aqui sua dúvida"
                     onChange={handleChange}
                 />
                 {/* <img src={iconSearch} alt="Pesquisar" /> */}
-                <button>
+                <button onClick={search}>
                     Procurar
                 </button>
             </div>
         </section>
 
-        <button className="btn-faq">
+        <a className="btn-faq" href="#box-questions">
             <span>Olhe nossa F.A.Q</span>
             <img src={arrowDownYellow} alt="F.A.Q" />
-        </button>
+        </a>
+
+        {/* <button className="btn-faq">
+            <span>Olhe nossa F.A.Q</span>
+            <img src={arrowDownYellow} alt="F.A.Q" />
+        </button> */}
 
         {/* QUESTIONS */}
-        <section className="box-questions">
+        <section id="box-questions" className="box-questions">
           <Accordion className="content-question">
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -55,7 +80,7 @@ function Questions() {
               id="panel1a-header"
               className="title-question"
             >
-              <Typography className="title" >O que é o CashEdu?</Typography>
+              <Typography id="title1" className="title" >O que é o CashEdu?</Typography>
               </AccordionSummary>
               <AccordionDetails className="answer">
               <Typography className="content-answer">
@@ -78,7 +103,7 @@ function Questions() {
               id="panel1a-header"
               className="title-question"
             >
-              <Typography className="title">Como faço para ter a conta digital no CashEdu?</Typography>
+              <Typography id="title" className="title">Como faço para ter a conta digital no CashEdu?</Typography>
               </AccordionSummary>
               <AccordionDetails className="answer">
               <Typography className="content-answer">
@@ -96,7 +121,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Por que ter uma conta no CashEdu?</Typography>
+                <Typography id="title2" className="title" >Por que ter uma conta no CashEdu?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -119,7 +144,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Tem alguma tarifa?</Typography>
+                <Typography id="title3" className="title" >Tem alguma tarifa?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -137,7 +162,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >O que é cashback?</Typography>
+                <Typography id="title4" className="title" >O que é cashback?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -159,7 +184,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Como faço para usufruir dos benefícios do cashback?</Typography>
+                <Typography id="title5" className="title" >Como faço para usufruir dos benefícios do cashback?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -178,7 +203,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Quando vou receber meu cashback?</Typography>
+                <Typography id="title6" className="title" >Quando vou receber meu cashback?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -199,7 +224,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Como faço para ver o saldo?</Typography>
+                <Typography id="title7" className="title" >Como faço para ver o saldo?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -219,7 +244,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Como diferencio os tipos de saldo no CashEdu?</Typography>
+                <Typography id="title8" className="title" >Como diferencio os tipos de saldo no CashEdu?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -239,7 +264,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >O saldo expira?</Typography>
+                <Typography id="title9" className="title" >O saldo expira?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
@@ -257,7 +282,7 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography className="title" >Quais as regras de uso dos diferentes tipos de saldo?</Typography>
+                <Typography id="title10" className="title" >Quais as regras de uso dos diferentes tipos de saldo?</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="answer">
                 <Typography className="content-answer">
