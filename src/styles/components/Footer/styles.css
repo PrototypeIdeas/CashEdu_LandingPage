@@ -89,6 +89,10 @@
         text-align: center;
     }
 
+    .footer > img {
+        margin: 0;
+    }
+
     .social-media .icons {
         margin-right: 0px;
     }

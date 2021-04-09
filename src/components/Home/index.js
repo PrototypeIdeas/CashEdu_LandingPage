@@ -12,33 +12,35 @@ function Header() {
     const [forStudentsSelected, setForStudentSelected] = useState(true);
     const [partnershipSelected, setPatnershipSelected] = useState(false);
     const [commonQuestions, setCommonQuestions] = useState(false);
-    const [navClassName, setNavClassName] = useState('header-content for-student');
 
 
     function handleForStudents() {
         setForStudentSelected(true);
         setPatnershipSelected(false);
         setCommonQuestions(false);
-        setNavClassName('header-content for-student')
     }
 
     function handlePartnerShip() {
         setPatnershipSelected(true);
         setForStudentSelected(false);
         setCommonQuestions(false);
-        setNavClassName('header-content partner-ship')
     }
 
     function handleCommonQuestions() {
         setPatnershipSelected(false);
         setForStudentSelected(false);
         setCommonQuestions(true);
-        setNavClassName('header-content questions')
     }
 
     return (   
         <>   
-            <nav className={navClassName}>
+            <nav className=
+                    {partnershipSelected ? (
+                        "header-content partner-ship"
+                    ) : ( 
+                        "header-content questions"
+                    )}
+            >
                 <img src={logo} alt="Logo CashEdu" />
                 <div className="buttons">
                     <button

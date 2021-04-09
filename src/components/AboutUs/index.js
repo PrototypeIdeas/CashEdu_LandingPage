@@ -1,6 +1,6 @@
 import React from 'react';
 
-import frame from '../../assets/frame.svg';
+import aboutImage from '../../assets/about-image.svg';
 
 import '../../styles/components/AboutUs/styles.css';
 
@@ -27,7 +27,7 @@ function AboutUs() {
 
                 <p className="text-bold">Equipe Cashedu</p>
             </div>
-            <img src={frame} alt="Frame provisório" />
+            <img src={aboutImage} alt="Frame provisório" />
         </section>
     );
 }

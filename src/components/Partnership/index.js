@@ -3,10 +3,13 @@ import React from 'react';
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs/index';
 
-import partnershipImg from '../../assets/partnership-image.png';
+import partnershipImg from '../../assets/partner-image.svg';
 import arrowDown from '../../icons/arrow-down.svg';
 import framePartner from '../../assets/frame-partner.svg';
-import frameBusiness from '../../assets/frame-business.svg';
+
+import lojista from '../../assets/lojista.svg';
+import instituicao from '../../assets/instituicao.svg';
+import parceiros from '../../assets/parceiros.svg';
 
 import '../../styles/components/Partnership/styles.css';
 
@@ -62,17 +65,17 @@ function Partnership() {
 
             <div className="cards-business">
                 <div className="store">
-                    <img src={frameBusiness} alt="Lojista" />
+                    <img src={lojista} alt="Lojista" />
                     <p>Lojista</p>
                 </div>
 
                 <div className="institution">
-                    <img src={frameBusiness} alt="Instituição de Ensino" />
+                    <img src={instituicao} alt="Instituição de Ensino" />
                     <p>Instituição de Ensino</p>
                 </div>
 
                 <div className="others">
-                    <img src={frameBusiness} alt="Outras Parcerias" />
+                    <img src={parceiros} alt="Outras Parcerias" />
                     <p>Outras Parcerias</p>
                 </div>
             </div>

@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin-top: -10rem;
+    /* margin-top: -10rem; */
     background: var(--bg-yellow);
 }
 
@@ -46,6 +46,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        margin: 0;
     }
 
     .about-app > img{

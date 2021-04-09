@@ -2,11 +2,16 @@ import React from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs';
-import avatar from '../../assets/image.svg';
-import headerImage from '../../assets/header-image.png';
+
+import headerImage from '../../assets/header-image.svg';
 import arrowDown from '../../icons/arrow-down.svg';
 import playStore from '../../assets/play-store.svg';
 import appleStore from '../../assets/apple-store.svg';
+import cashback from '../../assets/cashback.svg';
+import mesada from '../../assets/mesada.svg';
+import indicacao from '../../assets/indicacao.svg';
+import carteiraDigital from '../../assets/carteira-digital.svg';
+
 import '../../styles/components/ForStudents/styles.css';
 
 function Header() {
@@ -42,8 +47,10 @@ function Header() {
 
         <section className="cards">
             <div>
-                <div className="cashback option">
-                    <img src={avatar} alt="Avatar" />
+                <div className="cashback-option">
+                    <div className="frame">
+                        <img src={cashback} alt="Avatar" />
+                    </div>
                     <div className="text">
                         <h1>Cashback Educacional</h1>
                         <p>
@@ -53,8 +60,10 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="mesada option">
-                    <img src={avatar} alt="Avatar" />
+                <div className="mesada-option">
+                    <div className="frame">
+                        <img src={mesada} alt="Avatar" />
+                    </div>                    
                         <div className="text">
                             <h1>Mesada</h1>
                             <p>
@@ -65,8 +74,10 @@ function Header() {
                         </div>
                 </div>
 
-                <div className="indicacoes option">
-                    <img src={avatar} alt="Avatar" />
+                <div className="indicacoes-option">
+                    <div className="frame">
+                        <img src={indicacao} alt="Avatar" />
+                    </div>
                         <div className="text">
                             <h1>Indicações de amigo</h1>
                             <p>
@@ -76,8 +87,10 @@ function Header() {
                         </div>
                 </div>
 
-                <div className="carteira option">
-                    <img src={avatar} alt="Avatar" />
+                <div className="carteira-option">
+                    <div className="frame">
+                        <img src={carteiraDigital} alt="Avatar" />
+                    </div>
                         <div className="text">
                             <h1>Carteira Digital</h1>
                             <p>
