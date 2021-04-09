@@ -6,7 +6,7 @@ import '../../styles/components/AboutUs/styles.css';
 
 function AboutUs() {
     return (
-        <section className="about-us">
+        <section id="about-us" className="about-us">
             <div className="text-about-us">
                 <h1>Quem somos</h1>
                 <p>

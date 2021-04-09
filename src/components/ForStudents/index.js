@@ -38,14 +38,14 @@ function Header() {
             <img src={headerImage} alt="Estudos" />
         </section>
 
-        <button className="see-more">
+        <a className="see-more" href="#about-us">
             <span>Veja mais</span>
             <img src={arrowDown} alt="Veja mais" />
-        </button>
+        </a>
 
         <AboutUs />
 
-        <section className="cards">
+        <section id="beneficts" className="cards">
             <div>
                 <div className="cashback-option">
                     <div className="frame">
@@ -113,10 +113,10 @@ function Header() {
 
         <AboutApp />
         
-        <section className="contact">
+        <section id="contact" className="contact">
             <h1>ENTRE EM CONTATO</h1>
             <p>Ainda precisa de ajuda? Envie uma mensagem para gente para que possamos te auxiliar!</p>
-            <form>
+            <form method="post" action="mailto:gabriel.tosta@gmail.com">
                 <input 
                     type="text"
                     name="name"

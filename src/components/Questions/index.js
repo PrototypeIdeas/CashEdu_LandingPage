@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }from 'react';
 
 import arrowDownYellow from '../../icons/arrow-down-yellow.svg';
 
@@ -11,18 +11,15 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import '../../styles/components/Questions/styles.css';
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//       width: '100%',
-//     },
-//     heading: {
-//       fontSize: theme.typography.pxToRem(15),
-//       fontWeight: theme.typography.fontWeightRegular,
-//     },
-//   }));
 
 function Questions() {
-    // const classes = useStyles();
+  
+  const [question, setQuestion] = useState('');
+  
+  const handleChange = e => {
+    console.log('teste')
+    setQuestion(e.target.value);
+  }
 
     return (
       <>
@@ -35,6 +32,7 @@ function Questions() {
                     type="text"
                     name="pesquisar"
                     placeholder="Digite aqui sua dúvida"
+                    onChange={handleChange}
                 />
                 {/* <img src={iconSearch} alt="Pesquisar" /> */}
                 <button>

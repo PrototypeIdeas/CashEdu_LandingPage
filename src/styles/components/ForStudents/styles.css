@@ -53,6 +53,7 @@
     background: none;
     margin: 4rem auto;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .cards {
@@ -316,10 +317,12 @@
 
     .see-more span {
         display: none;
+        text-decoration: none;
     }
 
     .see-more {
         margin-top: 150px;
+        text-decoration: none;
     }
 
     .cards {

@@ -8,7 +8,7 @@ import mobile from '../../assets/mobile.jpeg';
 
 function AboutApp() {
     return (
-        <section className="about-app">
+        <section id="about-app" className="about-app">
             <div className="text-about-app">
                 <h1>SOBRE O APP</h1>
                 <p>

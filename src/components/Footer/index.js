@@ -17,10 +17,10 @@ function Footer() {
             <p>Estudante</p>
             <ul>
                 <li><a href="#">Apresentação</a></li>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Beneficíos</a></li>
-                <li><a href="#">Sobre o APP</a></li>
-                <li><a href="#">Entre em contato</a></li>
+                <li><a href="#about-us">Quem somos</a></li>
+                <li><a href="#beneficts">Beneficíos</a></li>
+                <li><a href="#about-app">Sobre o APP</a></li>
+                <li><a href="#contact">Entre em contato</a></li>
             </ul>
             </div>
         
@@ -28,11 +28,11 @@ function Footer() {
             <p>Parcerias</p>
             <ul>
                 <li><a href="#">Apresentação</a></li>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Nossos parceiros</a></li>
-                <li><a href="#">Tipos de Negócios</a></li>
-                <li><a href="#">Sobre o APP</a></li>
-                <li><a href="#">Entre em contato</a></li>
+                <li><a href="#about-us">Quem somos</a></li>
+                <li><a href="#for-partner">Nossos parceiros</a></li>
+                <li><a href="#type-business">Tipos de Negócios</a></li>
+                <li><a href="#about-app">Sobre o APP</a></li>
+                <li><a href="#contact">Entre em contato</a></li>
             </ul>
             </div>
 

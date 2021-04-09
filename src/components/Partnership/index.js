@@ -27,14 +27,14 @@ function Partnership() {
             </div>
         </section>
 
-        <button className="btn-see-more">
+        <a className="btn-see-more" href="#about-us">
             <span>Veja mais</span>
             <img src={arrowDown} alt="Veja mais" />
-        </button>
-
+        </a>
+        
         <AboutUs />
 
-        <section className="for-partner">
+        <section id="for-partner" className="for-partner">
             <h1>Milhares de parceiros utilizam CashEdu em suas vendas</h1>
             <div className="container-images">
                 <img src={framePartner} alt="Imagem do Parceiro" />
@@ -55,7 +55,7 @@ function Partnership() {
             </button>
         </section>
 
-        <section className="type-business">
+        <section id="type-business" className="type-business">
             <h1>Qual o seu tipo de negócio?</h1>
             <p>
                 Não importa qual o tipo do seu negócio, 
@@ -87,7 +87,7 @@ function Partnership() {
 
         <AboutApp />
 
-        <section className="contact">
+        <section id="contact" className="contact">
             <h1>Seja um Parceiro</h1>
             <p>
                 Preenchar as informações abaixo e comece a oferecer o cashback em sua loja ou sua instituição de ensino e fomente a educação.
