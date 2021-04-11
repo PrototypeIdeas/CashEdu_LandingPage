@@ -27,7 +27,7 @@ function Partnership() {
         document.getElementById('email').setAttribute("disabled","disabled");
         document.getElementById('observacao').setAttribute("disabled","disabled");
 
-        fetch(`http://localhost:3001/send-email`,
+        fetch(`https://landing-page-dot-cashedu.uc.r.appspot.com/send-email`,
         {
           method: "POST",
           headers: new Headers({
