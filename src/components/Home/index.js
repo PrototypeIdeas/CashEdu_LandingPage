@@ -41,6 +41,7 @@ function Header() {
                 <img src={logo} alt="Logo CashEdu" />
                 <div className="buttons">
                     <button
+                        id='for-students-button'
                         className={!forStudentsSelected ? ( "buttons buttonDisabled" ) : ( "buttons" )}
                         type="button"
                         onClick={handleForStudents}
@@ -49,6 +50,7 @@ function Header() {
                     </button>
 
                     <button
+                        id='partnership-button'
                         className={!partnershipSelected ? ( "buttons buttonDisabled" ) : ( "buttons" )}
                         type="button"
                         onClick={handlePartnerShip}
@@ -57,6 +59,7 @@ function Header() {
                     </button>
 
                     <button
+                        id='questions-button'
                         className={!commonQuestions ? ( "buttons buttonDisabled" ) : ( "buttons" )}
                         type="button"
                         onClick={handleCommonQuestions}

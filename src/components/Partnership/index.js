@@ -89,9 +89,9 @@ function Partnership() {
                 <img src={framePartner} alt="Imagem do Parceiro" />
             </div>
 
-            <button className="btn-partner">
+            <a href="#contact" className="btn-partner">
                 <span>Seja um parceiro</span>
-            </button>
+            </a>
         </section>
 
         <section id="type-business" className="type-business">
@@ -119,9 +119,9 @@ function Partnership() {
                 </div>
             </div>
 
-            <button className="btn-register">
+            <a href='#contact' className="btn-register">
                 Faça seu cadastro
-            </button>
+            </a>
         </section>
 
         <AboutApp />

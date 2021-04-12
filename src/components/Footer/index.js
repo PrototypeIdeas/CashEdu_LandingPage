@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import logo from '../../assets/logo.svg';
 import twitterLogo from '../../icons/twitter.svg';
@@ -6,9 +6,23 @@ import instagramLogo from '../../icons/instagram.svg';
 import linkedinLogo from '../../icons/linkedin.svg';
 import facebookLogo from '../../icons/facebook.svg';
 
+
 import '../../styles/components/Footer/styles.css';
 
 function Footer() {
+
+    function handleForStudents() {
+        document.getElementById('for-students-button').click();
+    }
+
+    function handlePartnerShip() {
+        document.getElementById('partnership-button').click();
+    }
+
+    function handleCommonQuestions() {
+        document.getElementById('questions-button').click();
+    }
+
     return (       
     <footer className="footer">
             <img src={logo} alt="Logo" />
@@ -16,27 +30,27 @@ function Footer() {
             <div className="student"> 
             <p>Estudante</p>
             <ul>
-                <li><a href="#">Apresentação</a></li>
-                <li><a href="#about-us">Quem somos</a></li>
-                <li><a href="#beneficts">Beneficíos</a></li>
-                <li><a href="#about-app">Sobre o APP</a></li>
-                <li><a href="#contact">Entre em contato</a></li>
+                <li><a href="#" onClick={handleForStudents}>Apresentação</a></li>
+                <li><a href="#about-us" onClick={handleForStudents}>Quem somos</a></li>
+                <li><a href="#beneficts" onClick={handleForStudents}>Beneficíos</a></li>
+                <li><a href="#about-app"onClick={handleForStudents}>Sobre o APP</a></li>
+                <li><a href="#contact" onClick={handleForStudents}>Entre em contato</a></li>
             </ul>
             </div>
         
             <div className="patnership">
             <p>Parcerias</p>
             <ul>
-                <li><a href="#">Apresentação</a></li>
-                <li><a href="#about-us">Quem somos</a></li>
-                <li><a href="#for-partner">Nossos parceiros</a></li>
-                <li><a href="#type-business">Tipos de Negócios</a></li>
-                <li><a href="#about-app">Sobre o APP</a></li>
-                <li><a href="#contact">Entre em contato</a></li>
+                <li><a href="#" onClick={handlePartnerShip}>Apresentação</a></li>
+                <li><a href="#about-us" onClick={handlePartnerShip}>Quem somos</a></li>
+                <li><a href="#for-partner" onClick={handlePartnerShip}>Nossos parceiros</a></li>
+                <li><a href="#type-business" onClick={handlePartnerShip}>Tipos de Negócios</a></li>
+                <li><a href="#about-app" onClick={handlePartnerShip}>Sobre o APP</a></li>
+                <li><a href="#contact" onClick={handlePartnerShip}>Entre em contato</a></li>
             </ul>
             </div>
 
-            <a href="#">Perguntas Frequentes</a>
+            <a href="#" onClick={handleCommonQuestions}>Perguntas Frequentes</a>
 
             <div className="social-media">
             <p>Nos Encontre:</p>

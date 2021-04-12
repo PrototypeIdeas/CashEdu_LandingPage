@@ -23,19 +23,14 @@
 .buttons button {
     width: 150px;
     height: 45px;
-
     background: var(--bg-button-active);
     color: var(--text-button);
-
     border-radius: 5px;
-
     font-size: 14px;
     font-weight: 700;
-
     margin-left: 1rem;
     border: none;
     outline: none;
-
     cursor: pointer;
 }
 

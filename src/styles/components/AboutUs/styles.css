@@ -8,19 +8,15 @@
 .about-us .text-about-us h1 {
     font-size: 40px;    
     font-weight: 700;
-
     padding-bottom: 2rem;
     margin-left: 5rem;
-
     color: var(--text-secondary);
 }
 
 .about-us .text-about-us .text-bold {
     font-size: 1rem;
     font-weight: 500;
-
     margin-left: 5rem;
-
     color: var(--text-secondary);
 }
 
@@ -28,9 +24,7 @@
     width: 70%;
     font-size: 1rem;
     font-weight: 300;
-
     margin-left: 5rem;
-
     color: var(--text-light);
 }
 

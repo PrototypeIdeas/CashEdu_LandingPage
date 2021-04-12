@@ -60,7 +60,7 @@ function Header() {
     return (
         <>
         <section className="presentation">
-            <div className="title">
+            <div id="present" className="title">
                 <h1>INVESTINDO NA SUA FORMAÇÃO</h1>
                 <p>
                     Maior programa de Cashback do mundo!
