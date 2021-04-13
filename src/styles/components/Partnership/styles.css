@@ -344,5 +344,24 @@
         text-align: center;
         height: 130vh;
     }
+
+    @media (max-width: 330px) {
+        .for-partner {
+            height: 160vh;
+        }
+
+        .store {
+            width: auto;
+            height: 50vh;
+        }
+        .institution{
+            width: auto;
+            height: 50vh;
+        }
+        .others{
+            width: auto;
+            height: 50vh;
+        }
+    }
     
 }
