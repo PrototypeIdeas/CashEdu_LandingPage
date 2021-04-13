@@ -62,6 +62,7 @@
     height: 3.5rem;
     display: flex;
     justify-content: center;
+    text-decoration: none;
     align-items: center;
     font-weight: 700;
     border-radius: 5px;
@@ -111,10 +112,10 @@
     width: 59vw;
 }
 
-
 @media (max-width: 1100px) {
     .search-questions h1 {
         width: 100%;
+        font-size: 50px;
     }
 
     .input-search {
@@ -122,10 +123,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 10px;
     }
 
     .input-search input {
-        width: 40vw;
+        width: 50vw;
     }
 
     .input-search button {

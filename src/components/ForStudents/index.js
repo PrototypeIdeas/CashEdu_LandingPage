@@ -155,7 +155,7 @@ function Header() {
 
         <AboutApp />
         
-        <section id="contact" className="contact">
+        <section id="students-contact" className="students-contact">
             <h1>ENTRE EM CONTATO</h1>
             <p>Ainda precisa de ajuda? Envie uma mensagem para gente para que possamos te auxiliar!</p>
             <div className="form">

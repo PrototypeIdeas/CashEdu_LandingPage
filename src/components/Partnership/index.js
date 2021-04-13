@@ -89,7 +89,7 @@ function Partnership() {
                 <img src={framePartner} alt="Imagem do Parceiro" />
             </div>
 
-            <a href="#contact" className="btn-partner">
+            <a href="#parthner-contact" className="btn-partner">
                 <span>Seja um parceiro</span>
             </a>
         </section>
@@ -119,14 +119,14 @@ function Partnership() {
                 </div>
             </div>
 
-            <a href='#contact' className="btn-register">
+            <a href='#parthner-contact' className="btn-register">
                 Faça seu cadastro
             </a>
         </section>
 
         <AboutApp />
 
-        <section id="contact" className="contact">
+        <section id="parthner-contact" className="parthner-contact">
             <h1>Seja um Parceiro</h1>
             <p>
                 Preenchar as informações abaixo e comece a oferecer o cashback em sua loja ou sua instituição de ensino e fomente a educação.

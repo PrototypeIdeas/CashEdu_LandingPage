@@ -7,10 +7,10 @@ import './styles/global.css';
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <Home />
       <Footer />
-    </> 
+    </React.Fragment> 
   );
 }
 

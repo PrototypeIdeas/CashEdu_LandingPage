@@ -183,22 +183,22 @@
     color: var(--text-secondary);
 }
 
-.contact {
-    /* height: 200px; */
+.students-contact {
+    height: 600px;
     background-image: url("../../../assets/bg-contact.png");
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.contact > .form > h1 > p {
+.students-contact > .form > h1 > p {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
 }
 
-.contact > h1 {
+.students-contact > h1 {
     font-size: 50px;
     font-weight: 700;
     display: flex;
@@ -209,7 +209,7 @@
     color: var(--text-secondary);
 }
 
-.contact > p {
+.students-contact > p {
     font-size: 20px;
     font-weight: 300;
     display: flex;
@@ -220,7 +220,7 @@
     color: var(--text-secondary);
 }
 
-.contact .form {
+.students-contact .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -228,7 +228,7 @@
     margin-top: 2rem;
 }
 
-.contact input {
+.students-contact input {
     width: 50%;
     height: 2.5rem;
     border: 1px solid var(--border);
@@ -238,7 +238,7 @@
     border-radius: 5px;
 }
 
-.contact button {
+.students-contact button {
     width: 50%;
     height: 2.5rem;
     font-size: 16px;
@@ -259,6 +259,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 40rem;
     }
 
     .about-us {
@@ -344,8 +345,9 @@
         padding-left: 0;
     }
 
-    .contact {
+    .students-contact {
         text-align: center;
+        height: 100vh;
     }
 
 }

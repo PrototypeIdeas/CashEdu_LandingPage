@@ -16,7 +16,6 @@ function Questions() {
   const [question, setQuestion] = useState('');
   
   const handleChange = e => {
-    console.log('teste')
     setQuestion(e.target.value);
   }
 
@@ -24,14 +23,11 @@ function Questions() {
  
     var name = document.getElementById("input-text").value;
     var pattern = name.toLowerCase();
-    var targetId = "";
   
     var divs = document.getElementsByClassName("title");
     for (var i = 0; i < divs.length; i++) {
       var index = divs[i].innerText.toLowerCase().indexOf(pattern);
       if (index != -1) {
-        // targetId = divs[i].parentNode.id;
-        // console.log('chegou aqui')
         document.getElementById(divs[i].id).scrollIntoView();
         document.getElementById(divs[i].id).click();
 
@@ -41,7 +37,7 @@ function Questions() {
   }
 
     return (
-      <>
+      <React.Fragment>
         <section className="search-questions">
             <h1>PERGUNTAS FREQUENTES</h1>
             <p>Tire suas dúvidas sobre o CashEdu nesta seção.</p>
@@ -54,7 +50,6 @@ function Questions() {
                     placeholder="Digite aqui sua dúvida"
                     onChange={handleChange}
                 />
-                {/* <img src={iconSearch} alt="Pesquisar" /> */}
                 <button onClick={search}>
                     Procurar
                 </button>
@@ -66,11 +61,6 @@ function Questions() {
             <img src={arrowDownYellow} alt="F.A.Q" />
         </a>
 
-        {/* <button className="btn-faq">
-            <span>Olhe nossa F.A.Q</span>
-            <img src={arrowDownYellow} alt="F.A.Q" />
-        </button> */}
-
         {/* QUESTIONS */}
         <section id="box-questions" className="box-questions">
           <Accordion className="content-question">
@@ -81,15 +71,15 @@ function Questions() {
               className="title-question"
             >
               <Typography id="title1" className="title" >O que é o CashEdu?</Typography>
-              </AccordionSummary>
-              <AccordionDetails className="answer">
+            </AccordionSummary>
+            <AccordionDetails className="answer">
               <Typography className="content-answer">
                 Somos uma plataforma de cashback educacional, fornecendo uma conta digital para o estudante, 
-                na qual o estudante pode gerenciar todas as suas transações conforme um banco convencional. 
-                Obtendo as vantagens de cashback em suas compras online e pagamento dos seus boletos.
-                Esse cashback é utilizado para auxiliar o pagamento de suas mensalidades em sua instituição de ensino.
-                Os alunos além de terem uma conta digital e incentivos de cashback para o pagamento de suas mensalidades, 
-                possuem acesso ao nosso clube de vantagens, tendo benefícios em nossos parceiros.
+                  na qual o estudante pode gerenciar todas as suas transações conforme um banco convencional. 
+                  Obtendo as vantagens de cashback em suas compras online e pagamento dos seus boletos.
+                  Esse cashback é utilizado para auxiliar o pagamento de suas mensalidades em sua instituição de ensino.
+                  Os alunos além de terem uma conta digital e incentivos de cashback para o pagamento de suas mensalidades, 
+                  possuem acesso ao nosso clube de vantagens, tendo benefícios em nossos parceiros.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -104,10 +94,10 @@ function Questions() {
               className="title-question"
             >
               <Typography id="title" className="title">Como faço para ter a conta digital no CashEdu?</Typography>
-              </AccordionSummary>
-              <AccordionDetails className="answer">
+            </AccordionSummary>
+            <AccordionDetails className="answer">
               <Typography className="content-answer">
-                Você deve baixar o app e realizar seu cadastro dentro do app. 
+                Você deve baixar o app e realizar seu cadastro dentro do app.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -122,8 +112,8 @@ function Questions() {
                 className="title-question"
               >
                 <Typography id="title2" className="title" >Por que ter uma conta no CashEdu?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
+              </AccordionSummary>
+              <AccordionDetails className="answer">
                 <Typography className="content-answer">
                     Se você deseja fazer suas compras em suas lojas favoritas, e também ter uma força extra 
                     para pagar seus estudos o serviço de cashback do CashEdu, que devolve parte do valor das compras 
@@ -138,19 +128,19 @@ function Questions() {
       
         <section className="box-questions">
           <Accordion className="content-question">
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="title-question"
-              >
-                <Typography id="title3" className="title" >Tem alguma tarifa?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
-                <Typography className="content-answer">
-                  O App da CahEdu é gratuito, não tem anuidade, nem taxa de manutenção.
-                </Typography>
-              </AccordionDetails>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              className="title-question"
+            >
+              <Typography id="title3" className="title" >Tem alguma tarifa?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="answer">
+              <Typography className="content-answer">
+                O App da CahEdu é gratuito, não tem anuidade, nem taxa de manutenção.
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </section>
 
@@ -163,19 +153,17 @@ function Questions() {
                 className="title-question"
               >
                 <Typography id="title4" className="title" >O que é cashback?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
+              </AccordionSummary>
+              <AccordionDetails className="answer">
                 <Typography className="content-answer">
-                  É dinheiro de volta!
-                    Quando você faz um pagamento pelo CashEdu em uma das lojas e estabelecimentos 
-                    parceiros, parte do valor dos produtos selecionados volta para você utilizar para pagar suas mensalidades escolares.
+                    É dinheiro de volta! Quando você faz um pagamento pelo CashEdu em uma das lojas e estabelecimentos 
+                    parceiros, parte do valor dos produtos selecionados volta para você utilizar para pagar suas mensalidades escolares.
                     Esse valor será informado de diversas maneiras: no site da Loja parceiro, 
-                    no momento do fechamento da compra e no extrato do CashEdu. 
+                    no momento do fechamento da compra e no extrato do CashEdu.
                 </Typography>
               </AccordionDetails>
           </Accordion>
         </section>
-
         <section className="box-questions">
           <Accordion className="content-question">
               <AccordionSummary
@@ -185,11 +173,11 @@ function Questions() {
                 className="title-question"
               >
                 <Typography id="title5" className="title" >Como faço para usufruir dos benefícios do cashback?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
+              </AccordionSummary>
+              <AccordionDetails className="answer">
                 <Typography className="content-answer">
                   Para usufruir do cashback você deve estar matriculado em uma 
-                  instituição de ensino que seja parceira. 
+                  instituição de ensino que seja parceira.
                 </Typography>
               </AccordionDetails>
           </Accordion>
@@ -197,105 +185,105 @@ function Questions() {
 
         <section className="box-questions">
           <Accordion className="content-question">
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="title-question"
-              >
-                <Typography id="title6" className="title" >Quando vou receber meu cashback?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
-                <Typography className="content-answer">
-                    Nas compras online para produtos selecionados, você recebe seu Cashback em até 30 dias corridos, 
-                    desde que a mercadoria tenha sido entregue!
-                    Já nas Lojas Físicas, o Cashback fica disponível em 7 dias corridos.
-                    E sem precisar fazer nada, o saldo entra automaticamente na sua conta.
-                </Typography>
-              </AccordionDetails>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              className="title-question"
+            >
+              <Typography id="title6" className="title" >Quando vou receber meu cashback?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="answer">
+              <Typography className="content-answer">
+                Nas compras online para produtos selecionados, você recebe seu Cashback em até 30 dias corridos, 
+                  desde que a mercadoria tenha sido entregue!
+                  Já nas Lojas Físicas, o Cashback fica disponível em 7 dias corridos.
+                  E sem precisar fazer nada, o saldo entra automaticamente na sua conta.
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </section>
 
         <section className="box-questions">
           <Accordion className="content-question">
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="title-question"
-              >
-                <Typography id="title7" className="title" >Como faço para ver o saldo?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
-                <Typography className="content-answer">
-                    O saldo aparecerá no meio da tela.
-                    Você pode ocultar se quiser clicando no olho mágico.
-                    Para desativar essa função, é só clicar novamente no olho, na tela.
-                </Typography>
-              </AccordionDetails>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              className="title-question"
+            >
+              <Typography id="title7" className="title" >Como faço para ver o saldo?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="answer">
+              <Typography className="content-answer">
+                  O saldo aparecerá no meio da tela.
+                  Você pode ocultar se quiser clicando no olho mágico.
+                  Para desativar essa função, é só clicar novamente no olho, na tela.
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </section>
 
         <section className="box-questions">
           <Accordion className="content-question">
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="title-question"
-              >
-                <Typography id="title8" className="title" >Como diferencio os tipos de saldo no CashEdu?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
-                <Typography className="content-answer">
-                    <p>• Saldo total: total de Cashback, depósito e transferências recebidas;</p>
-                    <p>• Saldo de Cashback: é o valor que você ganhou comprando nas lojas parceiras</p>
-                    <p>• Saldo de depósito: saldo de depósitos e transferências recebidas.</p>
-                </Typography>
-              </AccordionDetails>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              className="title-question"
+            >
+              <Typography id="title8" className="title" >Como diferencio os tipos de saldo no CashEdu?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="answer">
+              <Typography className="content-answer">
+                  <p>• Saldo total: total de Cashback, depósito e transferências recebidas;</p>
+                  <p>• Saldo de Cashback: é o valor que você ganhou comprando nas lojas parceiras</p>
+                  <p>• Saldo de depósito: saldo de depósitos e transferências recebidas.</p>
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </section>
 
         <section className="box-questions">
           <Accordion className="content-question">
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="title-question"
-              >
-                <Typography id="title9" className="title" >O saldo expira?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
-                <Typography className="content-answer">
-                  O saldo de Cashback não expira.
-                </Typography>
-              </AccordionDetails>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              className="title-question"
+            >
+              <Typography id="title9" className="title" >O saldo expira?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="answer">
+              <Typography className="content-answer">
+                O saldo de Cashback não expira.
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </section>
 
         <section className="box-questions">
           <Accordion className="content-question">
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                className="title-question"
-              >
-                <Typography id="title10" className="title" >Quais as regras de uso dos diferentes tipos de saldo?</Typography>
-                </AccordionSummary>
-                <AccordionDetails className="answer">
-                <Typography className="content-answer">
-                    Saldo de Cashback e mesada educacional: só poderá ser utilizado 
-                    no pagamento de suas mensalidades.
-                    Saldo de depósito, transferências: poderá ser usado em qualquer 
-                    tipo de transação, inclusive para pagamento de mensalidades. Não há restrições para a 
-                    utilização desse saldo.ashback não expira.
-                </Typography>
-              </AccordionDetails>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              className="title-question"
+            >
+              <Typography id="title10" className="title" >Quais as regras de uso dos diferentes tipos de saldo?</Typography>
+            </AccordionSummary>
+            <AccordionDetails className="answer">
+              <Typography className="content-answer">
+                  Saldo de Cashback e mesada educacional: só poderá ser utilizado 
+                  no pagamento de suas mensalidades.
+                  Saldo de depósito, transferências: poderá ser usado em qualquer 
+                  tipo de transação, inclusive para pagamento de mensalidades. Não há restrições para a 
+                  utilização desse saldo.ashback não expira.
+              </Typography>
+            </AccordionDetails>
           </Accordion>
         </section>
-      </>
+      </React.Fragment>
     );
 }
 

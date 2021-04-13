@@ -34,7 +34,7 @@ function Footer() {
                 <li><a href="#about-us" onClick={handleForStudents}>Quem somos</a></li>
                 <li><a href="#beneficts" onClick={handleForStudents}>Beneficíos</a></li>
                 <li><a href="#about-app"onClick={handleForStudents}>Sobre o APP</a></li>
-                <li><a href="#contact" onClick={handleForStudents}>Entre em contato</a></li>
+                <li><a href="#students-contact" onClick={handleForStudents}>Entre em contato</a></li>
             </ul>
             </div>
         
@@ -46,20 +46,20 @@ function Footer() {
                 <li><a href="#for-partner" onClick={handlePartnerShip}>Nossos parceiros</a></li>
                 <li><a href="#type-business" onClick={handlePartnerShip}>Tipos de Negócios</a></li>
                 <li><a href="#about-app" onClick={handlePartnerShip}>Sobre o APP</a></li>
-                <li><a href="#contact" onClick={handlePartnerShip}>Entre em contato</a></li>
+                <li><a href="#parthner-contact" onClick={handlePartnerShip}>Entre em contato</a></li>
             </ul>
             </div>
 
             <a href="#" onClick={handleCommonQuestions}>Perguntas Frequentes</a>
 
             <div className="social-media">
-            <p>Nos Encontre:</p>
-            <div className="icons">
-                <img src={facebookLogo} alt="Facebook" />
-                <img src={twitterLogo} alt="Twitter" />
-                <img src={linkedinLogo} alt="linkedin" />
-                <img src={instagramLogo} alt="Instagram" />
-            </div>
+                <p>Nos Encontre:</p>
+                <div className="icons">
+                    <img src={facebookLogo} alt="Facebook" />
+                    <img src={twitterLogo} alt="Twitter" />
+                    <img src={linkedinLogo} alt="linkedin" />
+                    <img src={instagramLogo} alt="Instagram" />
+                </div>
             </div>
         </footer>
     );
