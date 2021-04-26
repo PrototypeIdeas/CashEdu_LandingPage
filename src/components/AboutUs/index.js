@@ -21,11 +21,11 @@ function AboutUs() {
                 </p>
 
                 <p>
-                    O alunos além de terem uma conta digital e incentivos de cashback para o pagamento de suas mensalidades, 
+                    Os alunos além de terem uma conta digital e incentivos de cashback para o pagamento de suas mensalidades, 
                     possuem acesso ao nosso clube de vantagens, tendo benefícios em nossos parceiros.
                 </p>
 
-                <p className="text-bold">Equipe Cashedu</p>
+                <p className="text-bold">Equipe Cash Edu</p>
             </div>
             <img src={aboutImage} alt="Frame provisório" />
         </section>

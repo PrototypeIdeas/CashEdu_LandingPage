@@ -43,6 +43,7 @@ function Partnership() {
         }
         ).then(resp => {
             if (resp.ok) {
+                alert("Enviado com sucesso!")
                 document.location.reload(true);
             } else {
                 document.getElementById('nome').removeAttribute("disabled");

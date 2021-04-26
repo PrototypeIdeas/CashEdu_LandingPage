@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs';
@@ -15,10 +15,10 @@ import carteiraDigital from '../../assets/carteira-digital.svg';
 import InputMask from "react-input-mask";
 
 import '../../styles/components/ForStudents/styles.css';
+import { FormatStrikethrough } from '@material-ui/icons';
 
 
 function Header() {
-    
     useEffect(() => {
         if(window.innerWidth > 1100){
             document.getElementById('about-app').style.marginTop = "-10rem";
@@ -47,6 +47,7 @@ function Header() {
         }
         ).then(resp => {
             if (resp.ok) {
+                alert("Mensagem enviada com sucesso!")
                 document.location.reload(true);
             } else {
                 document.getElementById('nome').removeAttribute("disabled");
@@ -96,8 +97,8 @@ function Header() {
                     <div className="text">
                         <h1>Cashback Educacional</h1>
                         <p>
-                            Você pode também receber o cashback através do pagamento da sua mensalidade na sua instituição de ensino, 
-                            assim terá uma força a mais para a próxima mensalidade.
+                            Você pode também receber o cashback através do pagamento das mensalidades na sua instituição de ensino, assim terá
+                            uma força a mais para a próxima mensalidade.
                         </p>
                     </div>
                 </div>
@@ -124,7 +125,7 @@ function Header() {
                             <h1>Indicações de amigo</h1>
                             <p>
                                 Você pode indicar amigos para se matricular na sua instituição e 
-                                abrir uma conta no CashEdu, recebendo cashback caso seu amigo faça a adesão.
+                                abrir uma conta no Cash Edu, recebendo cashback caso seu amigo faça a adesão.
                             </p>
                         </div>
                 </div>
@@ -137,7 +138,7 @@ function Header() {
                             <h1>Carteira Digital</h1>
                             <p>
                                 Você tem sua conta digital aprovada, onde você pode realizar depósitos, 
-                                transferências, pagamento de contas e boletos através do pix.
+                                transferências, pagamento de contas e boletos através do Pix.
                             </p>
                         </div>
                 </div>
@@ -147,8 +148,9 @@ function Header() {
                 <h1>BENEFICIOS!</h1>
                 <h2>COMO O CASH EDU PODE AJUDAR NA SUA EDUCAÇÃO</h2>
                 <p>
-                    Se você deseja fazer suas compras em suas lojas favoritas, e também ter uma força extra para pagar seus estudos o serviço de cashback do CashEdu, que devolve parte do valor das compras 
-                    para o cliente gastar em sua instituição de ensino é a solução perfeita. 
+                    Se você deseja fazer compras em suas lojas favoritas e ter uma força extra para pagar seus estudos, o
+                    serviço de cashback do Cash Edu é a solução perfeita, pois devolve parte do valor das compras para você gastar em
+                    sua instituição de ensino.
                 </p>
             </div>
         </section>
@@ -161,9 +163,17 @@ function Header() {
             <div className="form">
                 <InputMask id="nome" name="nome" placeholder="Nome"/>
                 <InputMask id="telephone" mask="(99)99999-9999" name="telephone" placeholder="Telefone"/>
-                <InputMask id="email" name="email" placeholder="E-mail"/>
+                <InputMask 
+                    id="email" 
+                    name="email" 
+                    placeholder="E-mail" 
+                />
                 <InputMask id="observacao" name="observacao" placeholder="Observação"/>
-                <button onClick={submitForm}>Enviar</button>
+                <button 
+                    onClick={submitForm}
+                >
+                    Enviar
+                </button>
             </div>
         </section>
         </>

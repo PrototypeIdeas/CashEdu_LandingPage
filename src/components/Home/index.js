@@ -38,7 +38,9 @@ function Header() {
     return (   
         <>   
             <nav className={classNameNav}>
-                <img src={logo} alt="Logo CashEdu" />
+                <a href="/">
+                    <img src={logo} alt="Logo CashEdu" />
+                </a>
                 <div className="buttons">
                     <button
                         id='for-students-button'
@@ -46,7 +48,7 @@ function Header() {
                         type="button"
                         onClick={handleForStudents}
                     >
-                        Para estudantes
+                        Para Estudantes
                     </button>
 
                     <button
@@ -55,7 +57,7 @@ function Header() {
                         type="button"
                         onClick={handlePartnerShip}
                     >
-                        Seja um parcerio
+                        Seja um Parcerio
                     </button>
 
                     <button
@@ -64,7 +66,7 @@ function Header() {
                         type="button"
                         onClick={handleCommonQuestions}
                     >
-                        Dúvidas frequentes
+                        Dúvidas Frequentes
                     </button>
                 </div>               
             </nav>
