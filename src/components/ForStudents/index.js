@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import AboutApp from '../AboutApp/index';
 import AboutUs from '../AboutUs';
+import Form from '../Form';
 
 import headerImage from '../../assets/header-image.svg';
 import arrowDown from '../../icons/arrow-down.svg';
@@ -12,10 +13,8 @@ import mesada from '../../assets/mesada.svg';
 import indicacao from '../../assets/indicacao.svg';
 import carteiraDigital from '../../assets/carteira-digital.svg';
 
-import InputMask from "react-input-mask";
-
 import '../../styles/components/ForStudents/styles.css';
-import { FormatStrikethrough } from '@material-ui/icons';
+
 
 
 function Header() {
@@ -24,39 +23,6 @@ function Header() {
             document.getElementById('about-app').style.marginTop = "-10rem";
         }
     });
-
-    const submitForm = e => {
-        document.getElementById('nome').setAttribute("disabled","disabled");
-        document.getElementById('telephone').setAttribute("disabled","disabled");
-        document.getElementById('email').setAttribute("disabled","disabled");
-        document.getElementById('observacao').setAttribute("disabled","disabled");
-
-        fetch(`https://landing-page-dot-cashedu.uc.r.appspot.com/send-email`,
-        {
-          method: "POST",
-          headers: new Headers({
-            'Content-Type': 'application/json',
-            'Accept': '*/*',
-            'Access-Control-Allow-Origin': '*',
-          }),
-          body: JSON.stringify({
-            "subject": "Contato - Para Estudantes",
-            "text": "<strong>Nome: </strong>" + document.getElementById('nome').value + "<br><strong>Telefone: </strong>" + document.getElementById('telephone').value + 
-            "<br><strong>Email: </strong>" + document.getElementById('email').value + "<br><strong>OBS: </strong>" + document.getElementById('observacao').value
-          })
-        }
-        ).then(resp => {
-            if (resp.ok) {
-                alert("Mensagem enviada com sucesso!")
-                document.location.reload(true);
-            } else {
-                document.getElementById('nome').removeAttribute("disabled");
-                document.getElementById('telephone').removeAttribute("disabled");
-                document.getElementById('email').removeAttribute("disabled");
-                document.getElementById('observacao').removeAttribute("disabled");
-            }
-        })
-    };
 
     return (
         <>
@@ -159,22 +125,9 @@ function Header() {
         
         <section id="students-contact" className="students-contact">
             <h1>ENTRE EM CONTATO</h1>
-            <p>Ainda precisa de ajuda? Envie uma mensagem para gente para que possamos te auxiliar!</p>
-            <div className="form">
-                <InputMask id="nome" name="nome" placeholder="Nome"/>
-                <InputMask id="telephone" mask="(99)99999-9999" name="telephone" placeholder="Telefone"/>
-                <InputMask 
-                    id="email" 
-                    name="email" 
-                    placeholder="E-mail" 
-                />
-                <InputMask id="observacao" name="observacao" placeholder="Observação"/>
-                <button 
-                    onClick={submitForm}
-                >
-                    Enviar
-                </button>
-            </div>
+            <p>Ainda precisa de ajuda? Envie uma mensagem para gente para que possamos te auxiliar!</p>            
+            
+            <Form />
         </section>
         </>
     );
