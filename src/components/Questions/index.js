@@ -14,9 +14,11 @@ import '../../styles/components/Questions/styles.css';
 function Questions() {
   
   const [question, setQuestion] = useState('');
-  
+  const [searchOk, setSearchOk] = useState(true);
+
   const handleChange = e => {
     setQuestion(e.target.value);
+    setSearchOk(true)
   }
 
   const search = e => {
@@ -25,22 +27,26 @@ function Questions() {
     var pattern = name.toLowerCase();
   
     var divs = document.getElementsByClassName("title");
+    var valid = false;
     for (var i = 0; i < divs.length; i++) {
       var index = divs[i].innerText.toLowerCase().indexOf(pattern);
       if (index != -1) {
         document.getElementById(divs[i].id).scrollIntoView();
         document.getElementById(divs[i].id).click();
-
+        valid = true;
         break;
       }
-    }  
+    }
+    
+    setSearchOk(valid)
+    
   }
 
     return (
       <React.Fragment>
         <section className="search-questions">
             <h1>PERGUNTAS FREQUENTES</h1>
-            <p>Tire suas dúvidas sobre o CashEdu nesta seção.</p>
+            <p>Tire suas dúvidas sobre o Cash Edu nesta seção.</p>
 
             <div className="input-search">
                 <input
@@ -55,6 +61,12 @@ function Questions() {
                 </button>
             </div>
         </section>
+        {!searchOk && 
+        <div className="search-nok">
+          <h1>Infelizmente não enconstramos itens relacionados ao {question}</h1>
+          <p>Faça a busca novamente ou navegue pelos itens abaixo</p>
+        </div>}
+        
 
         <a className="btn-faq" href="#box-questions">
             <span>Olhe nossa F.A.Q</span>
@@ -70,7 +82,7 @@ function Questions() {
               id="panel1a-header"
               className="title-question"
             >
-              <Typography id="title1" className="title" >O que é o CashEdu?</Typography>
+              <Typography id="title1" className="title" >O que é o Cash Edu?</Typography>
             </AccordionSummary>
             <AccordionDetails className="answer">
               <Typography className="content-answer">
@@ -93,7 +105,7 @@ function Questions() {
               id="panel1a-header"
               className="title-question"
             >
-              <Typography id="title" className="title">Como faço para ter a conta digital no CashEdu?</Typography>
+              <Typography id="title" className="title">Como faço para ter a conta digital no Cash Edu?</Typography>
             </AccordionSummary>
             <AccordionDetails className="answer">
               <Typography className="content-answer">
@@ -111,16 +123,16 @@ function Questions() {
                 id="panel1a-header"
                 className="title-question"
               >
-                <Typography id="title2" className="title" >Por que ter uma conta no CashEdu?</Typography>
+                <Typography id="title2" className="title" >Por que ter uma conta no Cash Edu?</Typography>
               </AccordionSummary>
               <AccordionDetails className="answer">
                 <Typography className="content-answer">
                     Se você deseja fazer suas compras em suas lojas favoritas, e também ter uma força extra 
-                    para pagar seus estudos o serviço de cashback do CashEdu, que devolve parte do valor das compras 
+                    para pagar seus estudos o serviço de cashback do Cash Edu, que devolve parte do valor das compras 
                     para o cliente gastar em sua instituição de ensino é a solução perfeita. 
                     O aplicativo, oferece uma conta digital na qual você poderá pagar suas mensalidades, fazer compras online em lojas parceiras sem burocracia, 
                     e também pagar suas contas com praticidade, além de garantir sua economia.  
-                    O CASHEDU permite também, transferir dinheiro, solicitar a mesada educacional e obter benefícios com a indicação de amigos.
+                    O Cash Edu permite também, transferir dinheiro, solicitar a mesada educacional e obter benefícios com a indicação de amigos.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -156,10 +168,10 @@ function Questions() {
               </AccordionSummary>
               <AccordionDetails className="answer">
                 <Typography className="content-answer">
-                    É dinheiro de volta! Quando você faz um pagamento pelo CashEdu em uma das lojas e estabelecimentos 
+                    É dinheiro de volta! Quando você faz um pagamento pelo Cash Edu em uma das lojas e estabelecimentos 
                     parceiros, parte do valor dos produtos selecionados volta para você utilizar para pagar suas mensalidades escolares.
                     Esse valor será informado de diversas maneiras: no site da Loja parceiro, 
-                    no momento do fechamento da compra e no extrato do CashEdu.
+                    no momento do fechamento da compra e no extrato do Cash Edu.
                 </Typography>
               </AccordionDetails>
           </Accordion>
@@ -232,7 +244,7 @@ function Questions() {
               id="panel1a-header"
               className="title-question"
             >
-              <Typography id="title8" className="title" >Como diferencio os tipos de saldo no CashEdu?</Typography>
+              <Typography id="title8" className="title" >Como diferencio os tipos de saldo no Cash Edu?</Typography>
             </AccordionSummary>
             <AccordionDetails className="answer">
               <Typography className="content-answer">

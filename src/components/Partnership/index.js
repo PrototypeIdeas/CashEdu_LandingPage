@@ -42,7 +42,7 @@ function Partnership() {
         <AboutUs />
 
         <section id="for-partner" className="for-partner">
-            <h1>Milhares de parceiros utilizam CashEdu em suas vendas</h1>
+            <h1>Milhares de parceiros utilizam Cash Edu em suas vendas</h1>
             <div className="container-images">
                 <img src={framePartner} alt="Imagem do Parceiro" />
                 <img src={framePartner} alt="Imagem do Parceiro" />
@@ -66,7 +66,7 @@ function Partnership() {
             <h1>Qual o seu tipo de negócio?</h1>
             <p>
                 Não importa qual o tipo do seu negócio, 
-                o CashEdu poderá ajudar no seu crescimento 
+                o Cash Edu poderá ajudar no seu crescimento 
                 com a melhor solução de CashBack educacional
             </p>
 

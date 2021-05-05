@@ -18,7 +18,7 @@ function AboutApp() {
                     também pagar suas contas com praticidade, além de garantir sua economia.
                 </p>
                 <p>
-                    O CashEdu permite também, transferir dinheiro, solicitar a mesada educacional e 
+                    O Cash Edu permite também, transferir dinheiro, solicitar a mesada educacional e 
                     obter benefícios com a indicação de amigos.
                 </p>
 

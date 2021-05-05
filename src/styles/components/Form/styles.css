@@ -31,3 +31,12 @@
     background: var(--bg-button-yellow);
     cursor: pointer;
 }
+
+.form p {
+    margin-top: 5px;
+    height: 100%;
+    font-family: Inter;
+    font-size: 10px;
+    color: #e80a0a;
+}
+
