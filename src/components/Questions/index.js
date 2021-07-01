@@ -290,7 +290,7 @@ function Questions() {
                   no pagamento de suas mensalidades.
                   Saldo de depósito, transferências: poderá ser usado em qualquer 
                   tipo de transação, inclusive para pagamento de mensalidades. Não há restrições para a 
-                  utilização desse saldo.ashback não expira.
+                  utilização desse saldo, cashback não expira.
               </Typography>
             </AccordionDetails>
           </Accordion>
