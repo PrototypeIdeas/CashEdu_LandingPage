@@ -30,7 +30,7 @@ function Questions() {
     var valid = false;
     for (var i = 0; i < divs.length; i++) {
       var index = divs[i].innerText.toLowerCase().indexOf(pattern);
-      if (index != -1) {
+      if (index !== -1) {
         document.getElementById(divs[i].id).scrollIntoView();
         document.getElementById(divs[i].id).click();
         valid = true;
