@@ -23,7 +23,7 @@ function AboutApp() {
                 </p>
 
                 <div className="selos-store">
-                    <a href="#">
+                    <a href="https://play.google.com/store/apps/details?id=com.cashedu.dev">
                         <img src={playStore} alt="Download Play Store" />
                     </a>
                     <a href="#">                                          
