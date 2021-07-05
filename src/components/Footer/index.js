@@ -32,7 +32,7 @@ function Footer() {
             <ul>
                 <li><a href="#" onClick={handleForStudents}>Apresentação</a></li>
                 <li><a href="#about-us" onClick={handleForStudents}>Quem somos</a></li>
-                <li><a href="#beneficts" onClick={handleForStudents}>Beneficíos</a></li>
+                <li><a href="#beneficts" onClick={handleForStudents}>Benefícios</a></li>
                 <li><a href="#about-app"onClick={handleForStudents}>Sobre o APP</a></li>
                 <li><a href="#students-contact" onClick={handleForStudents}>Entre em contato</a></li>
             </ul>

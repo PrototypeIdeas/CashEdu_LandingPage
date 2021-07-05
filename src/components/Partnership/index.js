@@ -97,7 +97,7 @@ function Partnership() {
         <section id="parthner-contact" className="parthner-contact">
             <h1>Seja um Parceiro</h1>
             <p>
-                Preenchar as informações abaixo e comece a oferecer o cashback em sua loja ou sua instituição de ensino e fomente a educação.
+                Preencha as informações abaixo e comece a oferecer o cashback em sua loja ou sua instituição de ensino e fomente a educação.
             </p>
 
             <Form />

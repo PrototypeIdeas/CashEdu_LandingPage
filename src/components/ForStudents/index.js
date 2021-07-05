@@ -111,7 +111,7 @@ function Header() {
             </div>
 
             <div className="beneficios">
-                <h1>BENEFICIOS!</h1>
+                <h1>BENEFÍCIOS!</h1>
                 <h2>COMO O CASH EDU PODE AJUDAR NA SUA EDUCAÇÃO</h2>
                 <p>
                     Se você deseja fazer compras em suas lojas favoritas e ter uma força extra para pagar seus estudos, o
