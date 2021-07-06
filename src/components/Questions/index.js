@@ -127,12 +127,12 @@ function Questions() {
               </AccordionSummary>
               <AccordionDetails className="answer">
                 <Typography className="content-answer">
-                    Se você deseja fazer suas compras em suas lojas favoritas, e também ter uma força extra 
-                    para pagar seus estudos, o serviço de cashback do Cash Edu, que devolve parte do valor das compras 
+                    Se você deseja fazer suas compras em suas lojas favoritas e também ter uma força extra 
+                    para pagar seus estudos, o serviço de cashback do Cash Edu que devolve parte do valor das compras 
                     para o cliente gastar em sua instituição de ensino é a solução perfeita. 
-                    O aplicativo, oferece uma conta digital na qual você poderá pagar suas mensalidades, fazer compras online em lojas parceiras sem burocracia, 
-                    e também pagar suas contas com praticidade, além de garantir sua economia.  
-                    O Cash Edu permite também, transferir dinheiro, solicitar a mesada educacional e obter benefícios com a indicação de amigos.
+                    O aplicativo oferece uma conta digital na qual você poderá pagar suas mensalidades, fazer compras online em lojas parceiras sem burocracia, 
+                    e também pagar suas contas com praticidade, além de garantir sua economia. 
+                    O Cash Edu permite também transferir dinheiro, solicitar a mesada educacional e obter benefícios com a indicação de amigos.
                 </Typography>
               </AccordionDetails>
             </Accordion>
