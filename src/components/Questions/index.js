@@ -63,7 +63,7 @@ function Questions() {
         </section>
         {!searchOk && 
         <div className="search-nok">
-          <h1>Infelizmente não enconstramos itens relacionados ao {question}</h1>
+          <h1>Infelizmente não encontramos itens relacionados ao {question}</h1>
           <p>Faça a busca novamente ou navegue pelos itens abaixo</p>
         </div>}
         
