@@ -184,7 +184,7 @@
 }
 
 .students-contact {
-    height: 600px;
+    min-height: 600px;
     background-image: url("../../../assets/bg-contact.png");
     background-size: auto;
     background-position: center;
@@ -314,7 +314,7 @@
 
     .students-contact {
         text-align: center;
-        height: 100vh;
+        min-height: 100vh;
     }
 
 }
